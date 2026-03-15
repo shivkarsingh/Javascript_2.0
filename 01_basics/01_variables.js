@@ -90,3 +90,15 @@ console.log(accountState);
 // Hoisting	Yes (undefined)	TDZ	TDZ
 // Initialization needed	No	No	Yes
 
+/*
+
+very imp note
+
+var in global scope -> it becomes global variable
+inside function -> function scoped not outside visible
+inside a block scope -> it ignores block scope
+
+
+note to stop from moving to next line which is done by clg use process.stdout.write()
+but only available to node js env not in browser
+ */
