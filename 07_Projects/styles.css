@@ -1,0 +1,204 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0b1020;
+  --card: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.14);
+  --focus: #7aa2ff;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f6f7fb;
+    --card: rgba(0, 0, 0, 0.04);
+    --text: rgba(10, 16, 32, 0.92);
+    --muted: rgba(10, 16, 32, 0.66);
+    --border: rgba(10, 16, 32, 0.14);
+    --focus: #2f6bff;
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(
+      1200px 700px at 20% 10%,
+      rgba(110, 231, 255, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 600px at 90% 20%,
+      rgba(122, 162, 255, 0.18),
+      transparent 60%
+    ),
+    var(--bg);
+  color: var(--text);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+.page {
+  width: min(980px, calc(100% - 32px));
+  margin: 48px auto;
+}
+
+.mainHead {
+  margin: 0;
+  font-size: clamp(2rem, 2.6vw + 1.4rem, 3rem);
+  letter-spacing: -0.02em;
+}
+
+.subHead {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.content {
+  margin-top: 26px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03)
+  );
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.cardBtns {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease,
+    color 120ms ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.btn.active {
+  background: rgba(110, 231, 255, 0.12);
+  border-color: rgba(110, 231, 255, 0.28);
+  color: var(--text);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.cards {
+  padding: 18px;
+}
+
+.info {
+  display: none;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.info.active {
+  display: block;
+}
+
+.info h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.info p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+
+.btnDiff {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease,
+    color 120ms ease;
+}
+
+.btnDiff:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.btnDiff.active {
+  background: rgba(110, 231, 255, 0.12);
+  border-color: rgba(110, 231, 255, 0.28);
+  color: var(--text);
+}
+
+.btnDiff:active {
+  transform: translateY(1px);
+}
+
+.btnDiff:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* .myImg1{
+  width: 40vw;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.card1{
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+  justify-content: center;
+} */
