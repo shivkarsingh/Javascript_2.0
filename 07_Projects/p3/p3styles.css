@@ -1,0 +1,68 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* HEADING */
+h1 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+/* CLOCK BOX */
+.clock-box {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  background: #020617;
+  border: 1px solid #334155;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
+#startBtn {
+  padding: 12px 25px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+#startBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #38bdf8;
+}
+
+/* CLICK EFFECT */
+#startBtn:active {
+  transform: scale(0.95);
+}
