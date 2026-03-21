@@ -1,0 +1,101 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+}
+
+/* MAIN CONTAINER */
+.content {
+  text-align: center;
+}
+
+/* TEXT BELOW */
+.text {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  opacity: 0.7;
+}
+
+/* TABLE WRAPPER */
+.table {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 20px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  /* Shadow */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* HEADER */
+thead {
+  background: linear-gradient(90deg, #00f5ff, #7c3aed);
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: black;
+}
+
+/* BODY CELLS */
+td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+
+/* ROW HOVER */
+tbody tr:hover {
+  background: rgba(0, 245, 255, 0.08);
+}
+
+/* ZEBRA STRIPING */
+tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.03);
+}
+
+/* VALUE HIGHLIGHT EFFECT (IMPORTANT 🔥) */
+td.updated {
+  color: #00f5ff;
+  transform: scale(1.08);
+  text-shadow: 0 0 10px #00f5ff;
+}
+
+/* SMOOTH TRANSITION */
+td {
+  transition: all 0.15s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  th, td {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

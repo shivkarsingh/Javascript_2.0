@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Number Guessing Game</title>
+<link rel="stylesheet" href="./p4styles.css" />
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎯 Number Guessing Game</h1>
+  
+  <p class="subtitle">
+    Try and guess a random number between <b>1 and 100</b>.<br>
+    You have <b>10 attempts</b> to guess the right number.
+  </p>
+
+  <form>
+    <h2>Guess a Number</h2>
+    
+    <input id = "num" type="number" placeholder="Enter your guess..." min="1" max="100">
+    
+    <br>
+    
+    <button type="submit">Submit Guess</button>
+  </form>
+
+  <div class="result">
+    <p class="guesses">Previous Guesses: </p>
+    <span class="values"></span>
+    <p class="attempts">Attempts Left: 10</p>
+    <h3 class="display"></h3>
+  </div>
+
+</div>
+
+<script src="./p4script.js"></script>
+
+</body>
+</html>

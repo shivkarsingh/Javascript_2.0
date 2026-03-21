@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f172a;
+  color: white;
+  transition: background 0.5s ease;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #00f5ff, #7c3aed);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Base Button */
+.btn {
+  padding: 14px 35px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover */
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+/* Click press feel */
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* Glow ripple effect */
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.4s;
+}
+
+.btn:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+/* Start Button */
+.start {
+  border: 1px solid #00f5ff;
+}
+
+.start:hover {
+  background: #00f5ff;
+  color: black;
+}
+
+/* Stop Button */
+.stop {
+  border: 1px solid #ff004f;
+}
+
+.stop:hover {
+  background: #ff004f;
+}
+
+/* Optional: active state class (you can toggle via JS) */
+.active {
+  box-shadow: 0 0 30px currentColor;
+  animation: pulse 1s infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px currentColor; }
+  50% { box-shadow: 0 0 40px currentColor; }
+  100% { box-shadow: 0 0 10px currentColor; }
+}
