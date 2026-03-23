@@ -19,15 +19,16 @@ showCard(0);
 //   window.location.href = '/07_Projects/p1/p1index.html';
 // }); 
 
-document.querySelectorAll('.btnDiff').forEach( btn => {
-  btn.addEventListener("click", function() {
+document.querySelectorAll('.btnDiff').forEach(btn => {
+  btn.addEventListener("click", function () {
     
     const link = this.getAttribute('data-link');
 
     document.body.classList.add("fade-out");
 
     setTimeout(() => {
-      window.location.href = link;
+      window.open(link, "_blank"); // new tab
+      document.body.classList.remove("fade-out"); // optional reset
     }, 200);
   });
 });

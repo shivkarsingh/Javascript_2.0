@@ -131,16 +131,19 @@ body.fade-out {
   padding: 18px;
 }
 
+
 .info {
-  display: none;
+  display: none;   /* default hidden */
   padding: 16px;
   border-radius: 14px;
   background: var(--card);
   border: 1px solid var(--border);
+  flex-direction: column;
+  gap: 12px;
 }
 
 .info.active {
-  display: block;
+  display: flex;
 }
 
 .info h2 {
@@ -156,49 +159,44 @@ body.fade-out {
 
 
 .btnDiff {
-  appearance: none;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--muted);
-  padding: 10px 12px;
-  border-radius: 12px;
+  height: 5vh;
+  width: 7vw;
+  border: none;
+  background: linear-gradient(135deg, #7aa2ff, #6ee7ff);
+  color: #0b1020;
+  padding: 10px 16px;
+  border-radius: 10px;
   cursor: pointer;
-  font-weight: 650;
-  letter-spacing: 0.01em;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease,
-    color 120ms ease;
+  font-size: large;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  /* margin-top: 3vh; */
+  margin: 3vh auto;
+  transition: all 0.2s ease;
 }
 
+/* Hover */
 .btnDiff:hover {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(122, 162, 255, 0.4);
 }
 
-.btnDiff.active {
-  background: rgba(110, 231, 255, 0.12);
-  border-color: rgba(110, 231, 255, 0.28);
-  color: var(--text);
-}
-
+/* Click */
 .btnDiff:active {
-  transform: translateY(1px);
+  transform: translateY(1px) scale(0.98);
+  box-shadow: none;
 }
 
+/* Focus */
 .btnDiff:focus-visible {
   outline: 2px solid var(--focus);
-  outline-offset: 2px;
 }
 
-/* .myImg1{
-  width: 40vw;
-  height: 50vh;
+.cardImg {
+  width: 100%;
+  height: 500px;
   object-fit: cover;
-  border-radius: 25px;
+  border-radius: 12px;
+  margin-top: 12px;
 }
 
-.card1{
-  display: flex;
-  flex-direction: column;
-  gap: 7vh;
-  justify-content: center;
-} */
