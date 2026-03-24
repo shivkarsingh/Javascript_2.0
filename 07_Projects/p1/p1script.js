@@ -9,7 +9,7 @@ btns.forEach( ( btn ) => {
 
 const homeBtn = document.getElementsByClassName('fb1')[0];
 homeBtn.addEventListener( 'click', () => {
-    window.location.href = '../index.html';
+    window.location.href = '../main/index.html';
 });
 
 const resetBtn = document.querySelector('.fb2');
